@@ -1,0 +1,15 @@
+La empresa NubeVerde S.L. fue fundada en 2019 en A Coruña por Marta Solla y Diego Ferreiro.
+Se dedica al desarrollo de software de gestión energética para comunidades de vecinos.
+
+Su producto principal se llama EnerGestor, y permite a las comunidades de vecinos monitorizar
+el consumo eléctrico de zonas comunes en tiempo real, con alertas automáticas de consumo anómalo.
+
+NubeVerde tiene actualmente 14 empleados y factura aproximadamente 890.000 euros al año.
+Sus oficinas están en el Polígono de A Grela, A Coruña.
+
+En 2024, NubeVerde ganó el premio "Startup Gallega del Año" otorgado por la Xunta de Galicia.
+
+El CEO actual es Diego Ferreiro, mientras que Marta Solla ocupa el cargo de directora técnica (CTO).
+
+La empresa planea expandirse a Portugal en 2027, y está desarrollando una nueva función
+llamada "Predicción IA" que anticipará picos de consumo antes de que ocurran.
