@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexQueryResponse queryName="cartera-clara" type="AF">
+  <FlexStatements count="1">
+    <FlexStatement accountId="CC-TR" fromDate="20240101" toDate="20241231" period="Custom">
+      <Trades>
+        <Trade tradeID="cc-1" accountId="CC-TR" symbol="ACME" description="ACME CORP" isin="XX0000000001" assetCategory="STK" currency="EUR" tradeDate="20240315" quantity="10" tradePrice="100" buySell="BUY" openCloseIndicator="O" ibCommission="-1" ibCommissionCurrency="EUR" taxes="0" />
+        <Trade tradeID="cc-2" accountId="CC-TR" symbol="ACME" description="ACME CORP" isin="XX0000000001" assetCategory="STK" currency="EUR" tradeDate="20240920" quantity="-4" tradePrice="120" buySell="SELL" openCloseIndicator="C" ibCommission="-1" ibCommissionCurrency="EUR" taxes="0" />
+      </Trades>
+      <CashTransactions>
+        <CashTransaction transactionID="cc-3" accountId="CC-TR" symbol="ACME" description="ACME Cash Dividend" isin="DE0000000001" currency="EUR" dateTime="20240615" amount="10.00" type="Dividends" />
+        <CashTransaction transactionID="cc-4" accountId="CC-TR" symbol="ACME" description="ACME DE Tax" isin="DE0000000001" currency="EUR" dateTime="20240615" amount="-2.64" type="Withholding Tax" />
+      </CashTransactions>
+      <CorporateActions />
+      <OpenPositions />
+      <SecuritiesInfo />
+    </FlexStatement>
+  </FlexStatements>
+</FlexQueryResponse>

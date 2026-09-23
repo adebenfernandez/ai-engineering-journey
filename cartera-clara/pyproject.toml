@@ -1,0 +1,70 @@
+[project]
+name = "cartera-clara"
+version = "0.1.0"
+description = "Tu Renta de inversor, clara: todos tus brókeres, cálculo verificado por dos motores y una IA que explica sin inventar números."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "GPL-3.0-or-later"
+authors = [{ name = "Alberto Deben Fernández" }]
+# Versiones mínimas comprobadas en PyPI el 2026-09-23 (docs/00-documento-de-diseno.md §6.2).
+dependencies = [
+    "anthropic>=1.8,<2",
+    "pydantic>=2.13,<3",
+    "pydantic-settings>=2.15,<3",
+    "httpx>=0.28,<1",
+    "pypdf>=6.19,<7",
+    "fastapi>=0.141",
+    "uvicorn>=0.53",
+    "jinja2>=3.1,<4",
+    "python-multipart>=0.0.20",
+    "chromadb>=1.5,<2",
+    "mcp>=2.2,<3",
+    "typer>=0.27,<1",
+]
+
+[project.scripts]
+cartera-clara = "cartera_clara.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1",
+    "hypothesis>=6.140",
+    "ruff>=0.16",
+    "mypy>=2.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cartera_clara"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["src", "tests", "spikes"]
+extend-exclude = ["docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]  # tildes y comillas tipográficas en español
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
+mypy_path = "src"
+packages = ["cartera_clara"]
+
+[[tool.mypy.overrides]]
+module = ["chromadb.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "red: necesita Internet (BCE, AEAT…). Nunca en CI.",
+    "llm: llama a la API de Anthropic y cuesta dinero. Nunca en CI.",
+    "declarenta: necesita la CLI de DeclaRenta instalada (Node). Nunca en CI salvo el job opcional.",
+]
