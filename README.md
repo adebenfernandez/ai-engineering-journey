@@ -18,7 +18,7 @@ Proyectos de IA aplicada, de los primeros scripts a un producto completo.
 │   ├── 02-rag-basico/      RAG con ChromaDB sobre un documento de prueba
 │   └── 03-agente-rag-tfg/  Agente con herramientas y RAG sobre el TFG, servido con FastAPI y Docker
 └── investigacion/     Cómo se eligió el proyecto
-    ├── informes/           01: proyectos para hackathones · 02: IA para empresas (origen de Baremo)
+    ├── informes/           01: hackathones · 02: IA para empresas (Baremo) · 03: finanzas e inversión
     └── notas/              Notas de investigación con fuentes
 ```
 
