@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FIXTURE SINTÉTICA. NO es un dato real de PLACSP.
+  Se ha construido a mano con los nombres de elemento CODICE confirmados en código público que
+  parsea el feed real (TenderResult, ResultCode, ReceivedTenderQuantity, WinningParty,
+  AwardedTenderedProject/LegalMonetaryTotal, SMEAwardedIndicator, AwardDate) y en las columnas
+  documentadas de OpenPLACSP ("Precio de la oferta más baja" / "más alta" -> LowerTenderAmount /
+  HigherTenderAmount).
+  La posición exacta de ProcurementProjectLotID dentro de TenderResult NO está confirmada.
+  El spike S1 (baremo/spikes/s1_cobertura_placsp.py) DEBE sustituir esta fixture por una entrada
+  real adjudicada (ver baremo/docs/01-riesgos-y-verificaciones.md, tarea S1-c).
+-->
+<entry xmlns="http://www.w3.org/2005/Atom"
+       xmlns:cac-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonAggregateComponents-2"
+       xmlns:cbc-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonBasicComponents-2"
+       xmlns:cac="urn:dgpe:names:draft:codice:schema:xsd:CommonAggregateComponents-2"
+       xmlns:cbc="urn:dgpe:names:draft:codice:schema:xsd:CommonBasicComponents-2">
+  <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/SINTETICO-1</id>
+  <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=SINTETICO"/>
+  <summary type="text">Id licitación: SINT/2026/1; Órgano de Contratación: Ayuntamiento Sintético; Importe: 100000 EUR; Estado: ADJ</summary>
+  <title>Servicio sintético de mantenimiento de aplicaciones</title>
+  <updated>2026-05-20T10:00:00.000+02:00</updated>
+  <cac-place-ext:ContractFolderStatus>
+    <cbc:ContractFolderID>SINT/2026/1</cbc:ContractFolderID>
+    <cbc-place-ext:ContractFolderStatusCode>ADJ</cbc-place-ext:ContractFolderStatusCode>
+    <cac-place-ext:LocatedContractingParty>
+      <cac:Party>
+        <cac:PartyIdentification><cbc:ID schemeName="DIR3">L00000000</cbc:ID></cac:PartyIdentification>
+        <cac:PartyIdentification><cbc:ID schemeName="NIF">P0000000A</cbc:ID></cac:PartyIdentification>
+        <cac:PartyName><cbc:Name>Ayuntamiento Sintético</cbc:Name></cac:PartyName>
+      </cac:Party>
+    </cac-place-ext:LocatedContractingParty>
+    <cac:ProcurementProject>
+      <cbc:Name>Servicio sintético de mantenimiento de aplicaciones</cbc:Name>
+      <cbc:TypeCode>2</cbc:TypeCode>
+      <cac:BudgetAmount>
+        <cbc:EstimatedOverallContractAmount currencyID="EUR">120000</cbc:EstimatedOverallContractAmount>
+        <cbc:TotalAmount currencyID="EUR">121000</cbc:TotalAmount>
+        <cbc:TaxExclusiveAmount currencyID="EUR">100000</cbc:TaxExclusiveAmount>
+      </cac:BudgetAmount>
+      <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>72267000</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+    </cac:ProcurementProject>
+    <cac:TenderResult>
+      <cbc:ResultCode>8</cbc:ResultCode>
+      <cbc:AwardDate>2026-05-15</cbc:AwardDate>
+      <cbc:ReceivedTenderQuantity>5</cbc:ReceivedTenderQuantity>
+      <cbc:LowerTenderAmount currencyID="EUR">71000</cbc:LowerTenderAmount>
+      <cbc:HigherTenderAmount currencyID="EUR">98000</cbc:HigherTenderAmount>
+      <cbc:SMEAwardedIndicator>true</cbc:SMEAwardedIndicator>
+      <cac:WinningParty>
+        <cac:PartyIdentification><cbc:ID schemeName="NIF">B00000000</cbc:ID></cac:PartyIdentification>
+        <cac:PartyName><cbc:Name>Empresa Sintética SL</cbc:Name></cac:PartyName>
+      </cac:WinningParty>
+      <cac:AwardedTenderedProject>
+        <cbc:ProcurementProjectLotID>1</cbc:ProcurementProjectLotID>
+        <cac:LegalMonetaryTotal>
+          <cbc:TaxExclusiveAmount currencyID="EUR">74500</cbc:TaxExclusiveAmount>
+          <cbc:PayableAmount currencyID="EUR">90145</cbc:PayableAmount>
+        </cac:LegalMonetaryTotal>
+      </cac:AwardedTenderedProject>
+    </cac:TenderResult>
+    <cac:TenderingProcess>
+      <cbc:ProcedureCode>1</cbc:ProcedureCode>
+    </cac:TenderingProcess>
+  </cac-place-ext:ContractFolderStatus>
+</entry>

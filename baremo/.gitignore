@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+
+# Datos descargados o generados: se reconstruyen con `make ingesta` y los spikes.
+data/
+spikes/resultados/
